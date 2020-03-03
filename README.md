@@ -66,7 +66,7 @@ app.get('/userFriend', function (req, res) {
       
  
 ### API Endpoint for fetching a user’s friends of friends
-app.get('/userFriend', function (req, res) {
+app.get('/userFriendOfFriend', function (req, res) {
 
         sqlConfig.query('select DISTINCT     u1.uid as friendsoffriends,u3.uid as user_id     from     friend as u1      inner join friend as u2 on u1.uid=u2.friend_id     inner join friend as u3 on u2.uid=u3.friend_id where u1.uid<>u3.uid;', function(err, recordset) {
             if(err) console.log(err);
