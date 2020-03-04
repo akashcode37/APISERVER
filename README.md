@@ -38,13 +38,18 @@ u2 on u1.uid=u2.friend_id     inner join friend as u3 on u2.uid=u3.friend_id whe
 
 Now the schema for the api is ready we have to intialize the project
 
-## In linux 
+## TO set up nodejs in your linux instance Run the following commands
 
-make folder - mkdir firstapp 
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+	
+	. ~/.nvm/nvm.sh
+	
+	nvm install node
+	
+TO check if it is running
 
-cd firstappp -- download Nodejs by yum 
+	       node -e "console.log('Running Node.js ' + process.version)"
 
-yum install nodejs -y    it will download the nodejs application
 
 To craete api we need to initialize it by using -
 
